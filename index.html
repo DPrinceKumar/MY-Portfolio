@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="Css/bootstrap.min.css">
     <!--custumized css     -->
     <link rel="stylesheet" href="Css/index.css">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     
     <script src="javaScript/script.js"></script>
@@ -24,33 +23,36 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#home"><h3>Prince Kumar</h3></a>
     </div>
-    <button type="button" class="navbar-toggler" id="toggler" data-toggle="collapse" data-target="#NAVBAR">
+    <button type="button" id="toggler" class="navbar-toggler" data-toggle="collapse" data-target="#NAVBAR">
       <i class="fas fa-bars" id="clicked"></i>
     </button>
     <div  class="collapse navbar-collapse justify-content-end"  id="NAVBAR">
     <ul class="nav navbar-nav">
-        <li class="nav-item active mt-2" data-target="#home"><a href="#home"role="button" class="nav-link ">Home</a></li>
-        <li class="nav-item mt-2"data-target="#project"><a href="#project" role="button" class="nav-link">Project</a></li>
-        <li class="nav-item mt-2" data-target="#whoami"><a href="#whoami" role="button" class="nav-link ">About</a></li>
-        <li class="nav-item mt-2" data-target="#cv"><a href="#cv" role="button" class="nav-link ">Resume</a></li>
-        <li class="nav-item mt-2"  data-target="#contact"><a href="#contact"  role="button" class="nav-link ">Contact</a></li>
+        <li class="nav-item active mt-2" data-target="#home"><a href="#home"role="button" class="nav-link "><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item mt-2"data-target="#project"><a href="#project" role="button" class="nav-link"><i class="far fa-file"></i> Project</a></li>
+        <li class="nav-item mt-2" data-target="#cv"><a href="#cv" role="button" class="nav-link "><i class="far fa-address-card"></i> Resume</a></li>
+        <li class="nav-item mt-2"  data-target="#contact"><a href="#contact"  role="button" class="nav-link "><i class="far fa-envelope"></i> Contact</a></li>
+        <li class="nav-item mt-2" data-target="#whoami"><a href="#whoami" role="button" class="nav-link "><i class="fas fa-user"></i> About</a></li>
     </ul>
   </div>
 </nav>
 <main id="home">
-  <!-- <div class="scroll-indicator"></div> -->
     <header class="jumbotron">
       <div class="row row-content">
         <h3 class="sayhi col-12"><span>H</span><span>e</span>y<span> ! </span><span>I</span> <span>A</span><span>m</span></h3>
         <h2 class="sayhi col-12"><span>P</span><span>R</span><span>I</span><span>N</span><span>C</span><span>E</span> <span>K</span><span>U</span><span>M</span><span>A</span><span>R</span>
         </h2>
       </div>
-      <div class="justify-content col-12 col-sm-12 col-md-7 link-for-social-id">
+      <div class="justify-content col-12 col-sm-12 col-md-7 social-links link-for-social-id">
         <ul class="list-unstyled">
-        <li class="nav-item float-left mx-xl-3"><a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a></li>
-        <li class="nav-item float-left mx-xl-3"><a href="#" class="nav-link"><i class="fab fa-github"></i></a></li>
-        <li class="nav-item float-left mx-xl-3"><a href="#" class="nav-link"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-        <li class="nav-item float-left mx-xl-3"><a href="#" class="nav-link"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+
+        <li class="float-left mx-md-3"><a href="#" class="nav-link icon ml-1"><i class="fab fa-linkedin-in fa-lg" ></i></a></li>
+
+        <li class="float-left mx-md-3"><a href="#" class="nav-link icon ml-1"><i class="fab fa-github fa-lg"></i></a></li>
+
+        <li class="float-left mx-md-3"><a href="#" class="nav-link icon ml-1"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+        
+        <li class="float-left mx-md-3"><a href="#" class="nav-link icon ml-1"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
         </ul>
       </div>
 
@@ -66,10 +68,10 @@
     </header>
 <div id="whoami"></div>
 <br><br><br>
-    <section class="whoami">
+    <section class="whoami animate__animated animate__bounce animate__delay-2s">
       <div class=" container-fluid py-5">
         <div class="row row-content col-12 col-sm-12 col-md-12">
-          <h1>WHOAMI?</h1>
+          <h1 id="vertical-text">WHOAMI?</h1>
         </div>
         <div class="row row-content pl-4 px-sm-5 offset-md-2">
           <p>I am a Young Adult computer scientist. From childhood, I'm a technology addict and a person who is fond of traveling. I always loved to interact with people and work in Team.I’m probably the most passionate growing cybersecurity you will ever work with. I'm so much passionate about the role of security and privacy of every individual, I'm also passionate about design.</p>
@@ -79,10 +81,10 @@
       </div>
     </section>
 
-    <section class="h-100 py-4 col-12 col-md-12 mt-3">
+    <section class="h-100 py-4 col-12 col-md-12 mt-3 skill">
       <div class="container-fluid pt-3">
         <div class="row row-content">
-          <h1 class=" vertical-text">MY SKILLS</h1>
+          <h1 id="skill">MY SKILLS</h1>
         </div>
         <div class="offset-md-2">
         <div class="row row-content pl-3 col-12 col-md-12 ">
@@ -133,40 +135,57 @@
       </div>
     </section>
 
-    <section class="col-12 col-md-12 py-5 mt-3">
-        <div class="container-fluid">
+    <section class="col-12 col-md-12 py-5 mt-3 mb-sm-3">
+      <div class="container-fluid">
         <div class="row row-content col-12 col-md-12 ">
-          <h1>GALLERY</h1>
+          <h1 id="gallery">GALLERY</h1>
         </div>
-        <div class="row offset-md-2">
-
+      <div class="gallery col-12 mt-5" id="gallery">
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
         </div>
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+        </div>
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+        </div>
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+        </div>
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+        </div>
+        <div class="mb-3 col-xs-12">
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+        </div>
+      </div>
       </div>
     </section>
 <div id="project"></div>
 <br><br><br>
     <section class="container-fluid whoami h-100 py-3">
       <div class="row col-12 row-no-gutters col-lg-12">
-        <h1 class="vertical-text">PROJECT</h1>
+        <h1>PROJECT</h1>
       </div>
       <div class="row offset-md-2">
 
       </div>
     </section>
-</main>
+
 <div id="contact"></div>
 <br><br><br>
     <section  class="container-fluid contact" >
 <div class="container-fluid">
-  <div class="section-title">
-    <h1 class="vertical-text">CONTACT</h1>
+  <div class="row col-12 row-no-gutters col-lg-12">
+    <h1>CONTACT</h1>
   </div>
   <div class="row row-content col-12 col-md-9 offset-sm-2 ">
     <p>As you have seen I'm putting a lot of effort to help you what you are looking for so, to get the best outcome to form me I want you to get connected with me. So to get connected with me can I ask for a favor?
       Please provide your valuable feedback to improve me, Your small help means a lot to me to get ready for the corporate world.</p>
   </div>
 
-  <div class="row row-content mt-sm-4" data-aos="fade-in">
+  <div class="row row-content mt-sm-4">
     <div class="col-12 col-md-5 offset-md-1">
       <div class="info">
         <div class="address">
@@ -176,9 +195,9 @@
 
         <div class="email">
           <h4><i class="fas fa-at"></i>&nbsp;&nbsp;&nbsp;Email:</h4>
-          <p>Prince2kumar4147@gmail.com</p>
+          <p>prince2kumar4147@gmail.com</p>
         </div> 
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1705.3822755704134!2d75.7041465245594!3d31.254940622294743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4cc934c58d0992ec!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1589089368138!5m2!1sen!2sin" style="border:0; width: 100%; height: 290px;" allowfullscreen frameborder="0" aria-hidden="false" tabindex="0" allowfullscreen class="mt-2" ></iframe> 
+        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1705.3822755704134!2d75.7041465245594!3d31.254940622294743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4cc934c58d0992ec!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1589089368138!5m2!1sen!2sin" style="border:0; width: 100%; height:600px;" allowfullscreen frameborder="0" aria-hidden="false" tabindex="0" allowfullscreen class="mt-2" ></iframe> 
       </div>
     </div>
 
@@ -211,8 +230,16 @@
   </div>
 </div>
 </section>
+<div class="scroll-indicator"></div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+	$('.fa-bars').click(function(){
+		$(this).toggleClass('fa-times');
+	});
+});
+</script>
 </html>

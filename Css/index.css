@@ -12,6 +12,8 @@ html,body {
   font-weight:normal;
   word-spacing: 2px;
   line-height: 2em;
+  scroll-behavior: smooth;
+  transition: ease-in-out;
 }
 ::-webkit-scrollbar{
   display: none;
@@ -44,6 +46,20 @@ input,button,select,optgroup,textarea {
   font-size: inherit;
   line-height: inherit;
 }
+.nav-item::after{
+  content:'';
+  display:block;
+  width:0px;
+  height:2px;
+  background:#fec400;
+  transition: 0.2s;}
+.nav-item:hover::after{
+  width:100%;
+}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:10px 5px;transition:0.2s;}
+.dropdown-item.active,.dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
 .navbar-dark{
 background-color:#16161a;
 }
@@ -155,6 +171,41 @@ position: sticky;
   background: #149ddd;
   color: #fff;
 }
+.gallery {
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-width: 33%;
+-moz-column-width: 33%;
+column-width: 33%;
+ }
+.gallery .pics {
+-webkit-transition: all 350ms ease;
+transition: all 350ms ease; 
+}
+.gallery .animation {
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1); 
+}
+
+@media (max-width: 450px) {
+.gallery {
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+-webkit-column-width: 100%;
+-moz-column-width: 100%;
+column-width: 100%;
+}
+}
+
+@media (max-width: 400px) {
+.btn.filter {
+padding-left: 1.1rem;
+padding-right: 1.1rem;
+}
+}
 @media (min-width:360px){
   .jumbotron{
     margin-bottom:0 !important;
@@ -182,7 +233,7 @@ position: sticky;
 }
 @media (min-width: 760px) {
 .jumbotron {
-  padding: 5rem 2rem;
+  padding: 5rem 2rem !important;
   margin-bottom: -5rem !important;
   height: 33rem;
 }
@@ -193,7 +244,7 @@ h1{
 .cv{
   top:-40%;
   left: 6%;
-  z-index: 9999 !important;
+  z-index: 2 !important;
 }
 .sayhi{
   font-size: 2.5rem;
@@ -207,6 +258,45 @@ h1{
   margin-left: 48%;
   width:60%;
   height:80%;
+}
+#vertical-text{
+position: absolute !important;
+left:1em!important;
+top: -1rem !important;
+bottom: -28rem !important;
+display: inline-block !important;
+opacity: 1;
+margin-top:0rem;
+margin-bottom:5rem;
+-webkit-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+color: #110f15;
+font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-size:5em !important;
+line-height: 110%;
+font-weight: bolder;
+}
+#skill{
+  position: absolute !important;
+  left:0.1em!important;
+  top: 3.5rem !important;
+  bottom:0rem !important;
+  display: inline-block !important;
+  /* opacity: 1; */
+  margin-top:0rem;
+  margin-bottom:5rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  /* color: #110f15; */
+  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  /* line-height: 110%; */
+  font-weight: bolder;
+}
+#gallery{
+  margin-top: -3rem;
+  margin-left: auto !important;
 }
 }
 @media (min-width: 992px) {
@@ -229,6 +319,46 @@ margin-left:2rem;
   left:-0%;
   z-index: 999;
 }
+.whoami,.skill,.contact{
+  font-size: 1.7em;
+}
+#vertical-text{
+position: absolute !important;
+left:-2em!important;
+top:2em !important;
+bottom: -28rem !important;
+display: inline-block !important;
+opacity: 1;
+margin-top:0rem;
+margin-bottom:5rem;
+-webkit-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+color: #110f15;
+font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-size:7rem !important;
+line-height: 110%;
+font-weight: bolder;
+}
+#skill{
+  position: absolute !important;
+  left:1em!important;
+  top: 3.5rem !important;
+  bottom:0rem !important;
+  display: inline-block !important;
+  margin-top:0rem;
+  margin-bottom:5rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  line-height: 110%;
+  font-weight: bolder;
+}
+#gallery{
+  margin-top: -3rem;
+  margin-left: auto !important;
+}
 }
 @media (min-width: 1200px) {
 nav{
@@ -238,10 +368,10 @@ button{
  font-size:90% !important; 
 }
 body{
-  font-size: 180% !important;
+  font-size: 130% !important;
 }
 h1{
-  font-size: 5.5rem !important;
+  font-size: 3rem !important;
   opacity: 0.5;
 }
 .navbar-header a{
@@ -276,6 +406,47 @@ margin-left:2rem;
 input,::placeholder{
 height: 3rem;
 }
+.whoami,.skill,.contact{
+  font-size: 1.7rem;
+}
+#vertical-text{
+position: absolute !important;
+left:-1em!important;
+top:1em !important;
+bottom: -28rem !important;
+display: inline-block !important;
+opacity: 1;
+margin-top:0rem;
+margin-bottom:5rem;
+-webkit-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+color: #110f15;
+font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-size:6rem !important;
+line-height: 110%;
+font-weight: bolder;
+}
+#skill{
+  position: absolute !important;
+  left:6rem!important;
+  top: 3.5rem !important;
+  bottom:0rem !important;
+  display: inline-block;
+  margin-top:0rem;
+  margin-bottom:5rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  font-size: 4rem !important;
+  line-height: 110%;
+  font-weight: bolder;
+}
+#gallery{
+  margin-top: -3rem;
+  margin-left: auto !important;
+}
 }
 /* extra extra large scereen */
 @media (min-width: 2000px) {
@@ -283,10 +454,10 @@ nav{
  height: 8rem; 
 }
 h1{
-  font-size: 8rem;
+  font-size: 4rem !important;
   opacity: 0.5;
 }
-.navbar-header a{
+.navbar-header h3{
   font-size: 4rem !important;
 }
 .navbar-nav a{
@@ -300,12 +471,13 @@ button{
 }
 input[type=email],[type=text]{
 height: 50% !important;
+
 }
 body{
-  font-size:230% !important;
+  font-size:2.5rem !important;
 }
 .sayhi{
-  font-size: 4rem;
+  font-size: 6rem;
 }
 button{
  font-size:90% !important; 
@@ -332,6 +504,14 @@ button{
   height: 9rem;
   font-weight: 100 !important;
   font-size: 3rem !important;
-  z-index: 9999 !important;
+  z-index: 2 !important;
+}
+.email p,.address p{
+  font-size:0.7em !important ;
+}
+.address h4,.email h4{
+
+   font-weight: normal !important;
+  font-size: 2rem !important;
 }
 }
