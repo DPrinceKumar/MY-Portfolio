@@ -5,7 +5,7 @@ html,body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll !important;
-  font-family: sans-serif;
+  font-family:'TitilliumWeb-Black', sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -20,7 +20,7 @@ html,body {
   background: transparent;
 }
 body {
-    font-family:'Avenir Next Bold';
+    font-family:'TitilliumWeb-Black','Avenir Next Bold' !important;
     font-size: 0.98rem;
     font-weight: 400;
     line-height: 1.5;
@@ -31,18 +31,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-family: 'TitilliumWeb-Bold', 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+    font-family:'TitilliumWeb-Bold', 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
 }
 h1{
   opacity: 0.5;
 }
 p,ul,li,label,:placeholder-shown,button,form{
-  font-family: 'Avenir Next','Ubuntu-Medium';
+  font-family: 'Avenir Next','Ubuntu-Medium' !important;
   font-weight: 500;
 }
 input,button,select,optgroup,textarea {
   margin: 0;
-  font-family: inherit;
+  font-family:inherit !important;
   font-size: inherit;
   line-height: inherit;
 }
@@ -64,11 +64,11 @@ input,button,select,optgroup,textarea {
 background-color:#16161a;
 }
 .jumbotron {
-  padding-top: 5rem;
+  padding-top: 5rem ;
   margin-bottom:0 !important;
   background-color: #16161a;
   border-radius: 0.3rem;
-  height:36rem !important;
+  height:37em !important;
 }
 .sayhi{
   font-size:2rem;
@@ -78,7 +78,7 @@ background-color:#16161a;
     height:fit-content;
     margin-top: 1rem;
     background-color:#242629;
-    font-family:'Avenir Next Bold','Ubuntu-Medium','Open Sans';
+    font-family:'Avenir Next Bold','Ubuntu-Medium','Open Sans' !important;
     font-weight: bold;
     word-spacing: 3px;
     line-height: 2em;
@@ -100,7 +100,7 @@ position: sticky;
 .cv{
   clear: both;
   overflow: hidden;
-  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
 }
 .cv {
   vertical-align: middle;
@@ -189,41 +189,44 @@ transition: all 350ms ease;
 transform: scale(1); 
 }
 
-@media (max-width: 450px) {
-.gallery {
--webkit-column-count: 1;
--moz-column-count: 1;
-column-count: 1;
--webkit-column-width: 100%;
--moz-column-width: 100%;
-column-width: 100%;
-}
-}
-
-@media (max-width: 400px) {
-.btn.filter {
-padding-left: 1.1rem;
-padding-right: 1.1rem;
-}
-}
 @media (min-width:360px){
   .jumbotron{
-    margin-bottom:0 !important;
-    height: 42rem;
+    margin-bottom:0rem !important;
+    height:38rem !important;
   }
 }
-@media (min-width:420px){
+@media (max-width: 400px) {
+  .btn.filter {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  }
   .jumbotron{
-    margin-bottom: 2.3rem !important;
-    height: 46rem;
+    height:32rem !important;
   }
   p{
     padding-right: 1rem;
   }
 }
+@media (max-width: 450px) {
+  .gallery {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  }
+  .jumbotron {
+    padding: 5rem 2rem !important;
+    height: 36rem !important;
+  
+  }
+  }
 @media (min-width: 570px) {
 .jumbotron {
-  padding: 5rem 2rem;
+  padding: 5rem 2rem !important;
+  height: 36rem !important;
+
 }
 .prince {
   margin-left: -5%;
@@ -272,26 +275,23 @@ margin-bottom:5rem;
 -ms-transform: rotate(-90deg);
 transform: rotate(-90deg);
 color: #110f15;
-font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-family:'TitilliumWeb-Black', !important;
 font-size:5em !important;
 line-height: 110%;
 font-weight: bolder;
 }
 #skill{
   position: absolute !important;
-  left:0.1em!important;
+  left:1.5em!important;
   top: 3.5rem !important;
   bottom:0rem !important;
   display: inline-block !important;
-  /* opacity: 1; */
   margin-top:0rem;
   margin-bottom:5rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  /* color: #110f15; */
-  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
-  /* line-height: 110%; */
+  font-family:'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
   font-weight: bolder;
 }
 #gallery{
@@ -335,7 +335,7 @@ margin-bottom:5rem;
 -ms-transform: rotate(-90deg);
 transform: rotate(-90deg);
 color: #110f15;
-font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-family:'TitilliumWeb-Black','Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
 font-size:7rem !important;
 line-height: 110%;
 font-weight: bolder;
@@ -351,7 +351,46 @@ font-weight: bolder;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  font-family:'TitilliumWeb-Black', 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
+  line-height: 110%;
+  font-weight: bolder;
+}
+#gallery{
+  margin-top: -3rem;
+  margin-left: auto !important;
+}
+}
+@media(min-width:1000px){
+  #vertical-text{
+position: absolute !important;
+left:-1.5em!important;
+top:2em !important;
+bottom: -28rem !important;
+display: inline-block !important;
+opacity: 1;
+margin-top:0rem;
+margin-bottom:5rem;
+-webkit-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+color: #110f15;
+font-family:'TitilliumWeb-Black', 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
+font-size:7rem !important;
+line-height: 110%;
+font-weight: bolder;
+}
+#skill{
+  position: absolute !important;
+  left:10rem!important;
+  top: 3.5rem !important;
+  bottom:0rem !important;
+  display: inline-block !important;
+  margin-top:0rem;
+  margin-bottom:5rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-family:'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
   line-height: 110%;
   font-weight: bolder;
 }
@@ -411,9 +450,9 @@ height: 3rem;
 }
 #vertical-text{
 position: absolute !important;
-left:-1em!important;
-top:1em !important;
-bottom: -28rem !important;
+left: 0.1em!important;
+top: 1em !important;
+bottom: -19.9rem !important;
 display: inline-block !important;
 opacity: 1;
 margin-top:0rem;
@@ -422,7 +461,7 @@ margin-bottom:5rem;
 -ms-transform: rotate(-90deg);
 transform: rotate(-90deg);
 color: #110f15;
-font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+font-family:'TitilliumWeb-Black', 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
 font-size:6rem !important;
 line-height: 110%;
 font-weight: bolder;
@@ -438,7 +477,7 @@ font-weight: bolder;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold';
+  font-family: 'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
   font-size: 4rem !important;
   line-height: 110%;
   font-weight: bolder;
@@ -492,11 +531,26 @@ button{
   font-size: 3rem;
 }
 .jumbotron{
+  margin-top: 2em;
   padding-top: 10rem;
   height: 50rem;
 }
+.whoami,p,label,:placeholder-shown{
+  margin-top: 2em !important;
+  font-size: 2rem;
+}
 .sayhi{
   padding-left: 10rem;
+}
+#vertical-text{
+  top: 2.9em !important;
+  font-size: 4em !important;
+}
+#skill{
+  top: 3em !important;
+  bottom: 15em !important;
+  left: -2em !important;
+  font-size: 4em !important;
 }
 .cv{
   left: 6%;
