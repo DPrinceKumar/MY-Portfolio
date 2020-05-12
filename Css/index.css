@@ -92,9 +92,9 @@ background-color:#16161a;
   margin-top: -1rem;
 }
 .prince{
-position: sticky;
+  position: sticky;
   margin-top: 7%;
-  height: 100%;
+  height:90%;
   width: 110%;
 }
 .cv{
@@ -107,7 +107,6 @@ position: sticky;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   position: relative;
-  overflow: hidden;;
 }
 .cv-1:before {
   content: "";
@@ -219,7 +218,6 @@ transform: scale(1);
   .jumbotron {
     padding: 5rem 2rem !important;
     height: 36rem !important;
-  
   }
   }
 @media (min-width: 570px) {
@@ -229,10 +227,10 @@ transform: scale(1);
 
 }
 .prince {
+  margin-top: 0;
   margin-left: -5%;
-  width: 530px;
+  width: 75%;
 }
-
 }
 @media (min-width: 760px) {
 .jumbotron {
@@ -261,38 +259,6 @@ h1{
   margin-left: 48%;
   width:60%;
   height:80%;
-}
-#vertical-text{
-position: absolute !important;
-left:1em!important;
-top: -1rem !important;
-bottom: -28rem !important;
-display: inline-block !important;
-opacity: 1;
-margin-top:0rem;
-margin-bottom:5rem;
--webkit-transform: rotate(-90deg);
--ms-transform: rotate(-90deg);
-transform: rotate(-90deg);
-color: #110f15;
-font-family:'TitilliumWeb-Black', !important;
-font-size:5em !important;
-line-height: 110%;
-font-weight: bolder;
-}
-#skill{
-  position: absolute !important;
-  left:1.5em!important;
-  top: 3.5rem !important;
-  bottom:0rem !important;
-  display: inline-block !important;
-  margin-top:0rem;
-  margin-bottom:5rem;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  font-family:'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important;
-  font-weight: bolder;
 }
 #gallery{
   margin-top: -3rem;
@@ -446,11 +412,14 @@ input,::placeholder{
 height: 3rem;
 }
 .whoami,.skill,.contact{
-  font-size: 1.7rem;
+    font-size: 1.7rem;
+}
+.whoami{
+  padding-top: 10rem;
 }
 #vertical-text{
 position: absolute !important;
-left: 0.1em!important;
+left:-1em!important;
 top: 1em !important;
 bottom: -19.9rem !important;
 display: inline-block !important;
@@ -543,7 +512,7 @@ button{
   padding-left: 10rem;
 }
 #vertical-text{
-  top: 2.9em !important;
+  top: 1.9em !important;
   font-size: 4em !important;
 }
 #skill{
