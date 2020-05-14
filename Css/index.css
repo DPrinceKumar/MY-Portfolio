@@ -59,8 +59,6 @@ input,button,select,optgroup,textarea {
 }
 .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
 .nav-link{padding:10px 5px;transition:0.2s;}
-.dropdown-item.active,.dropdown-item:active{color:#212529;}
-.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
 .navbar-dark{
 background-color:#16161a;
 }
@@ -68,7 +66,7 @@ background-color:#16161a;
   padding-top: 5rem ;
   margin-bottom:0 !important;
   background-color: #16161a;
-  border-radius: 0.3rem;
+  border-radius: 0.30rem;
 }
 .sayhi{
   font-size:2rem;
@@ -111,6 +109,36 @@ background-color:#16161a;
 .project{
   padding-top: 70px !important;
 }
+.text-center-cert {
+  position: absolute;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0.5;
+  font-weight:bold;
+  font-family:'Ubuntu-Medium', 'Ubuntu' ,'Avenir Next Bold' !important ;
+}
+.img-gradient{
+  position:relative;
+  display:inline-block;
+}
+.img-gradient:after {
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: -moz-linear-gradient(top, rgba(0,47,75,0.5) 0%, rgba(220, 66, 37, 0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220, 66, 37, 0.5)), color-stop(100%,rgba(0,47,75,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,47,75,0.5) 0%,rgba(220, 66, 37, 0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+.img-gradient img{
+  display:block;
+}
+
 .contact{
   padding-top: 60px;
   height:max-content;
@@ -173,11 +201,83 @@ transition: all 350ms ease;
 -ms-transform: scale(1);
 transform: scale(1); 
 }
+.project-section{
+  height: max-content;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:#242629 ;
+  z-index: -888 !important;
+}
 
-@media (min-width:360px){
-  .jumbotron{
-    margin-bottom:3em !important;
-  }
+.project-card{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+	grid-template-rows:auto;
+	grid-gap:40px;
+}
+
+.project-card .box{
+	position: relative;
+	background: #060c21;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	border:1px solid #000;
+}
+
+.project-card .box:before{
+	content:"";
+	position: absolute;
+	top:-2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -1;
+	-webkit-transform: skew(2deg,2deg);
+	-ms-transform: skew(2deg,2deg);
+	-o-transform: skew(2deg,2deg);
+	transform: skew(2deg,2deg);
+}
+
+.project-card .box:after{
+	content:"";
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+}
+.project-card .box:nth-child(1):before{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.project-card .box:nth-child(2):before{
+	background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.project-card .box:nth-child(3):before{
+	background: linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.project-card .box:nth-child(4):before{
+	background: linear-gradient(315deg,#ff0000,#ffc107);
+}
+.box .contact img{
+  position: relative;
+  width: 100%;
+  top:-5em !important;
+	-webkit-transform: translateY(40px);
+	-ms-transform: translateY(40px);
+	-o-transform: translateY(40px);
+	transform: translateY(40px);
+}
+.learn-more{
+  text-decoration:none;
+  color: #b8c1ec;
+  font-family: 'Avenir Next' !important;
+font-weight: normal;
 }
 @media (max-width: 400px) {
 .btn.filter {
@@ -221,6 +321,9 @@ column-width: 100%;
 }
 .cv{
   margin: auto;
+}
+.card-img{
+  top:0.01rem !important;
 }
 }
 @media (min-width: 570px) {
