@@ -209,7 +209,7 @@ transform: scale(1);
   padding-top: 50px;
   padding-bottom: 50px;
   background-color:#242629 ;
-  z-index: -888 !important;
+  z-index:999 !important;
 }
 
 .project-card{
@@ -246,7 +246,6 @@ transform: scale(1);
 }
 
 .project-card .box:after{
-	content:"";
 	position: absolute;
 	top:0;
 	left: 0;
